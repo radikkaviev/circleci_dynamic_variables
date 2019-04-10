@@ -9,11 +9,13 @@ jobs:
 
       - run:
           name: RANCHER API URL
-          command: 'export FULL_RANCHER_WORKLOAD_REDEPLOYMENT_API="https://${TARGET_SERVER_ADDRESSS}:8443${RANCHER_WORKLOAD_REDEPLOYMENT_API}"' >> $BASH_ENV
+          command: |
+            echo 'export MY_ENV_VAR="https://${TARGET_SERVER_ADDRESSS}:8443${RANCHER_WORKLOAD_REDEPLOYMENT_API}"' >> $BASH_ENV
           
       - run:
           name: FULL_RANCHER_WORKLOAD_REDEPLOYMENT_API
           command: echo ${FULL_RANCHER_WORKLOAD_REDEPLOYMENT_API}
+          
       # - run:
       #     name: RANCHER API DATA
       #     command: echo ${}
