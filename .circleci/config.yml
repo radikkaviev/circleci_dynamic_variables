@@ -10,7 +10,7 @@ jobs:
       - run:
           name: RANCHER API URL
           command: |
-            echo 'export FULL_RANCHER_WORKLOAD_REDEPLOYMENT_API="https://${TARGET_SERVER_ADDRESSS}:8443${RANCHER_WORKLOAD_REDEPLOYMENT_API}"' >> $BASH_ENV
+            echo 'export FULL_RANCHER_WORKLOAD_REDEPLOYMENT_API="https://${TARGET_SERVER_ADDRESS}:8443${RANCHER_WORKLOAD_REDEPLOYMENT_API}"' >> $BASH_ENV
           
       - run:
           name: FULL_RANCHER_WORKLOAD_REDEPLOYMENT_API
